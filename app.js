@@ -68,13 +68,13 @@ function draw() {
   fill(0);
   textSize(20);
   textAlign(LEFT);
-  text("Total Donation Amount: $" + total, 20, height - 30);
-  text("Actualized Total: $" + actualizedTotal, 20, height - 60);
+  text("Possible Donation Amount: $" + total, 15, height - 15);
+  text("Actualized Total: $" + actualizedTotal, 15, height - 30);
 
   // Draw "X" button for removing selected tile
   if (selectedTile) {
     fill(255, 0, 0);
-    rect(width - 60, height - 60, 50, 50);
+    rect(width - 60, height - 60, 25, 25);
     fill(255);
     textSize(30);
     textAlign(CENTER, CENTER);
@@ -185,8 +185,8 @@ class SelectableSquare {
     fill(0);
     textSize(12);
     textAlign(CENTER, CENTER);
-    text("Count: " + donationStats[this.value].count, this.x + this.size / 2, this.y + this.size + 15);
-    text("Sum: $" + donationStats[this.value].sum, this.x + this.size / 2, this.y + this.size + 30);
+    text("" + donationStats[this.value].count, this.x + this.size / 2, this.y + this.size + 15);
+    text("" + donationStats[this.value].sum, this.x + this.size / 2, this.y + this.size + 30);
   }
 
     isTouchOver() {
